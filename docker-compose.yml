@@ -1,0 +1,11 @@
+services:
+  news-app:
+    container_name: online-store
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./online_store:/online_store
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"

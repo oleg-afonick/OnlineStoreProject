@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if products %}
+    <table>
+        <tr>
+            <td><u>Название товара</u></td>
+            <td><u>Цена</u></td>
+            <td><u>Описание</u></td>
+        </tr>
+    {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.description }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endif %}
+</body>
+</html>
