@@ -27,3 +27,9 @@ class ProductCreate(CreateView):
         if self.request.method == 'POST':
             post.name = f'Новое имя: {form.get_name()}'
         return super().form_valid(form)
+
+
+class ProductUpdate(UpdateView):
+    form_class = ProductForm
+    model = Product
+    template_name = 'product_update.html'
